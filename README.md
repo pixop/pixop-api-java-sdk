@@ -1,7 +1,7 @@
 # pixop-api-java-sdk
 Java SDK for integrating Pixop's video archive conversion REST API (https://docs.pixop.com/)
 
-**API Version:** `1.0.0-rc.3`
+**API Version:** `1.0.0-rc.4`
 
 ## Recommendation
 
@@ -12,8 +12,8 @@ concurrency issues.
 
 ```java
 
-import com.pixop.api.sdk.ApiClient;
-import com.pixop.api.sdk.ApiException;
+import com.pixop.api.sdk.invoker.ApiClient;
+import com.pixop.api.sdk.invoker.ApiException;
 import com.pixop.api.sdk.model.dto.ApiKeyPost;
 import com.pixop.api.sdk.model.dto.WebhookPublicKey;
 import com.pixop.api.sdk.openapi.ApiKeyApi;
