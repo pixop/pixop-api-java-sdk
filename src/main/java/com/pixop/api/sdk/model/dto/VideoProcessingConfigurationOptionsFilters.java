@@ -41,7 +41,7 @@ import java.util.StringJoiner;
   VideoProcessingConfigurationOptionsFilters.JSON_PROPERTY_POST_PROCESSOR
 })
 @JsonTypeName("VideoProcessingConfigurationOptions_filters")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-10-02T08:04:39.260621056Z[UTC]", comments = "Generator version: 7.15.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-10-03T10:21:06.144469555Z[UTC]", comments = "Generator version: 7.15.0")
 public class VideoProcessingConfigurationOptionsFilters {
   /**
    * Specifies the deinterlacer to use for video processing.  **Additional settings must be set on &#x60;filterSettings.interlacedFieldOrderMode&#x60;** E.g.:    - &#x60;DEINT&#x60;: Pixop Deinterlacer. Pixop&#39;s deep neural network based video deinterlacer which reduces aliasing artifacts such as interline twitter. Doubles the output frame rate.   - &#x60;YADIF&#x60;: “Yet Another DeInterlacing Filter”. Classic deinterlacer which checks the pixels of previous, current and next frames to re-create the missed field via edge-directed interpolation and applies a spatial check to prevent most artifacts.   - &#x60;BWDIF&#x60;: Bob Weaver. Classic deinterlacer based on a motion adaptive approach that fuses the YADIF and Weston 3-Field methods. Doubles the output frame rate.   - &#x60;WESTON3F&#x60;: Weston Three Field. Classic deinterlacer that considers the same position in the previous and next fields and two of its neighbors in both directions in the current field. Doubles the output frame rate. 

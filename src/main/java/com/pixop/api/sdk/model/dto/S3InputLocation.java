@@ -40,7 +40,7 @@ import java.util.StringJoiner;
   S3InputLocation.JSON_PROPERTY_ACCESS_KEY_HIDDEN,
   S3InputLocation.JSON_PROPERTY_SECRET_ACCESS_KEY_HIDDEN
 })
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-10-02T08:04:39.260621056Z[UTC]", comments = "Generator version: 7.15.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-10-03T10:21:06.144469555Z[UTC]", comments = "Generator version: 7.15.0")
 public class S3InputLocation {
   public static final String JSON_PROPERTY_ID = "id";
   @javax.annotation.Nonnull

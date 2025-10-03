@@ -35,7 +35,7 @@ import java.util.StringJoiner;
   VideoProcessingConfigurationOptionsProcessingSettingsInputColorSpaceConversionToneMapper.JSON_PROPERTY_OUTPUT_NITS
 })
 @JsonTypeName("VideoProcessingConfigurationOptions_processingSettings_inputColorSpaceConversion_toneMapper")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-10-02T08:04:39.260621056Z[UTC]", comments = "Generator version: 7.15.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-10-03T10:21:06.144469555Z[UTC]", comments = "Generator version: 7.15.0")
 public class VideoProcessingConfigurationOptionsProcessingSettingsInputColorSpaceConversionToneMapper {
   /**
    * Specifies the tone-mapping algorithm to be applied for converting High Dynamic Range (HDR) content to Standard Dynamic Range (SDR) or managing values within a limited dynamic range.  Available algorithms: - &#x60;LINEAR&#x60;: Linear stretch of the reference gamut - &#x60;CLIP&#x60;: Hard-clip out-of-range values - &#x60;HABLE&#x60;: Preserve dark and bright details - &#x60;REINHARD&#x60;: Simple curve for brightness preservation - &#x60;MOBIUS&#x60;: Contrast and color retention for in-range material 

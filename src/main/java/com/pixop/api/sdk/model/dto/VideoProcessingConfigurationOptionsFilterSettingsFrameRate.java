@@ -35,7 +35,7 @@ import java.util.StringJoiner;
   VideoProcessingConfigurationOptionsFilterSettingsFrameRate.JSON_PROPERTY_FPS
 })
 @JsonTypeName("VideoProcessingConfigurationOptions_filterSettings_frameRate")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-10-02T08:04:39.260621056Z[UTC]", comments = "Generator version: 7.15.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-10-03T10:21:06.144469555Z[UTC]", comments = "Generator version: 7.15.0")
 public class VideoProcessingConfigurationOptionsFilterSettingsFrameRate {
   /**
    * Specifies frame rate settings using tags for common video standards.  If &#x60;tag&#x60; is used, the &#x60;fps&#x60; field is ignored.  Available tags and their corresponding frame rates: - &#x60;FILM_NTSC&#x60;: Film with NTSC compatibility — 23.976 fps - &#x60;FILM&#x60;: Film — 24 fps - &#x60;VIDEO_PAL&#x60;: PAL video — 25 fps - &#x60;VIDEO_NTSC&#x60;: NTSC video — 29.97 fps - &#x60;VIDEO_HD&#x60;: HD video — 30 fps - &#x60;VIDEO_PAL_FAST&#x60;: PAL video — 50 fps - &#x60;VIDEO_NTSC_FAST&#x60;: HD video with NTSC compatibility — 59.94 fps - &#x60;VIDEO_HD_FAST&#x60;: HD video — 60 fps - &#x60;VIDEO_PAL_UHD&#x60;: PAL UHD video — 100 fps - &#x60;VIDEO_NTSC_UHD&#x60;: UHD video with NTSC compatibility — 119.88 fps - &#x60;VIDEO_UHD_FAST&#x60;: UHD video — 120 fps 

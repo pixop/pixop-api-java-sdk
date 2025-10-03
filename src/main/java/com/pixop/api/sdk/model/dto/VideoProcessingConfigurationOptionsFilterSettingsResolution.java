@@ -36,7 +36,7 @@ import java.util.StringJoiner;
   VideoProcessingConfigurationOptionsFilterSettingsResolution.JSON_PROPERTY_ASPECT_RATIO_TAG
 })
 @JsonTypeName("VideoProcessingConfigurationOptions_filterSettings_resolution")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-10-02T08:04:39.260621056Z[UTC]", comments = "Generator version: 7.15.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-10-03T10:21:06.144469555Z[UTC]", comments = "Generator version: 7.15.0")
 public class VideoProcessingConfigurationOptionsFilterSettingsResolution {
   /**
    * Presets for resolution scaling, allowing quick selection of standard resolutions or scaling factors. For instance:   - STANDARD_HD: 1280 x 720 pixels.   - FULL_HD: 1920 x 1080 pixels.   - UHD_4K: 3840 x 2160 pixels.   - UHD_8K: 7680 x 4320 pixels.   - 1X: Source video frame dimensions.   - 2X: Source video frame dimensions * 2   - 3X: Source video frame dimensions * 3   - 4X: Source video frame dimensions * 4 

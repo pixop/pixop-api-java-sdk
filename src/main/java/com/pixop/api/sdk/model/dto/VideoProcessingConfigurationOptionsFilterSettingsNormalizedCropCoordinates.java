@@ -37,7 +37,7 @@ import java.util.StringJoiner;
   VideoProcessingConfigurationOptionsFilterSettingsNormalizedCropCoordinates.JSON_PROPERTY_Y2
 })
 @JsonTypeName("VideoProcessingConfigurationOptions_filterSettings_normalizedCropCoordinates")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-10-02T08:04:39.260621056Z[UTC]", comments = "Generator version: 7.15.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-10-03T10:21:06.144469555Z[UTC]", comments = "Generator version: 7.15.0")
 public class VideoProcessingConfigurationOptionsFilterSettingsNormalizedCropCoordinates {
   public static final String JSON_PROPERTY_X1 = "x1";
   @javax.annotation.Nonnull

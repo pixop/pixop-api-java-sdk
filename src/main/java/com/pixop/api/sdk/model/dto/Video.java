@@ -55,7 +55,7 @@ import java.util.StringJoiner;
   Video.JSON_PROPERTY_CLIP_ID,
   Video.JSON_PROPERTY_OUTPUT
 })
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-10-02T08:04:39.260621056Z[UTC]", comments = "Generator version: 7.15.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-10-03T10:21:06.144469555Z[UTC]", comments = "Generator version: 7.15.0")
 public class Video {
   public static final String JSON_PROPERTY_ID = "id";
   @javax.annotation.Nonnull

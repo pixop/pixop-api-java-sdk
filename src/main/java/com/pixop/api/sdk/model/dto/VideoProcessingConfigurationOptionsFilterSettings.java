@@ -47,7 +47,7 @@ import java.util.StringJoiner;
   VideoProcessingConfigurationOptionsFilterSettings.JSON_PROPERTY_FILM_GRAIN
 })
 @JsonTypeName("VideoProcessingConfigurationOptions_filterSettings")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-10-02T08:04:39.260621056Z[UTC]", comments = "Generator version: 7.15.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-10-03T10:21:06.144469555Z[UTC]", comments = "Generator version: 7.15.0")
 public class VideoProcessingConfigurationOptionsFilterSettings {
   /**
    * Specifies how to determine the interlaced field order when &#x60;filters.deinterlacer&#x60; is used. For instance:   - &#x60;AUTO_METADATA&#x60;: Quickly determine the interlaced field order based on the source file metadata   - &#x60;AUTO_SEGMENT_ANALYSIS&#x60;: Auto determine the interlaced field order of the whole video based on a deep analysis of up to three one-minute segments   - &#x60;TOP_FIELD_FIRST&#x60;: Top field first   - &#x60;BOTTOM_FIELD_FIRST&#x60;: Bottom field first 

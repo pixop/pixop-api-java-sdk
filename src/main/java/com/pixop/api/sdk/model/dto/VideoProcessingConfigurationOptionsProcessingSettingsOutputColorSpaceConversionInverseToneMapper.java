@@ -36,7 +36,7 @@ import java.util.StringJoiner;
   VideoProcessingConfigurationOptionsProcessingSettingsOutputColorSpaceConversionInverseToneMapper.JSON_PROPERTY_SATURATION_BOOST
 })
 @JsonTypeName("VideoProcessingConfigurationOptions_processingSettings_outputColorSpaceConversion_inverseToneMapper")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-10-02T08:04:39.260621056Z[UTC]", comments = "Generator version: 7.15.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-10-03T10:21:06.144469555Z[UTC]", comments = "Generator version: 7.15.0")
 public class VideoProcessingConfigurationOptionsProcessingSettingsOutputColorSpaceConversionInverseToneMapper {
   /**
    * Specifies the inverse tone-mapping (ITM) algorithm to be applied for converting Standard Dynamic Range (SDR) to High Dynamic Range (HDR).  Available algorithms: - &#x60;INFINITEHDR&#x60;: Pixop InfiniteHDR — Pixop&#39;s ML-based SDR-HDR filter with over-exposure compensation - &#x60;LINEAR&#x60;: Linear stretch of the reference gamut - &#x60;HABLE&#x60;: Preserve dark and bright details - &#x60;REINHARD&#x60;: Simple curve for brightness preservation - &#x60;MOBIUS&#x60;: Contrast and color retention for in-range material 

@@ -39,7 +39,7 @@ import java.util.StringJoiner;
   User.JSON_PROPERTY_NAME,
   User.JSON_PROPERTY_HAS_CONFIRMED_EMAIL
 })
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-10-02T08:04:39.260621056Z[UTC]", comments = "Generator version: 7.15.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-10-03T10:21:06.144469555Z[UTC]", comments = "Generator version: 7.15.0")
 public class User {
   public static final String JSON_PROPERTY_ID = "id";
   @javax.annotation.Nonnull

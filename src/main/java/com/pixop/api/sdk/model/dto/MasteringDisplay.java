@@ -40,7 +40,7 @@ import java.util.StringJoiner;
   MasteringDisplay.JSON_PROPERTY_MIN_LUMINANCE,
   MasteringDisplay.JSON_PROPERTY_MAX_LUMINANCE
 })
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-10-02T08:04:39.260621056Z[UTC]", comments = "Generator version: 7.15.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-10-03T10:21:06.144469555Z[UTC]", comments = "Generator version: 7.15.0")
 public class MasteringDisplay {
   /**
    * Presets for primary color chromaticities and white point, enabling quick selection of standard chromaticity values. For instance:   - P3_D65     - red: x: 0.68, y: 0.32     - green: x: 0.265, y: 0.69     - blue: x: 0.15, y: 0.06     - whitePoint: x: 0.3127, y: 0.329   - BT2020     - red: x: 0.708, y: 0.292     - green: x: 0.17, y: 0.797     - blue: x: 0.131, y: 0.046     - whitePoint: x: 0.3127, y: 0.329 

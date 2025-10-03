@@ -34,7 +34,7 @@ import java.util.StringJoiner;
   VideoProcessingConfigurationOptionsFilterSettingsFilmGrain.JSON_PROPERTY_GRAIN_STRENGTH
 })
 @JsonTypeName("VideoProcessingConfigurationOptions_filterSettings_filmGrain")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-10-02T08:04:39.260621056Z[UTC]", comments = "Generator version: 7.15.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-10-03T10:21:06.144469555Z[UTC]", comments = "Generator version: 7.15.0")
 public class VideoProcessingConfigurationOptionsFilterSettingsFilmGrain {
   /**
    * Specifies the size of the film grain.
