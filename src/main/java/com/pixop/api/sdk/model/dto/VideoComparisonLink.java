@@ -20,8 +20,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import com.pixop.api.sdk.model.dto.VideoFile;
-import java.time.OffsetDateTime;
+import java.net.URI;
 import java.util.UUID;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
@@ -30,123 +29,102 @@ import java.net.URLEncoder;
 import java.util.StringJoiner;
 
 /**
- * The &#x60;MasterVideo&#x60; represents the original video uploaded to the Pixop Platform. It serves as the source video for processing and creating derived outputs. 
+ * Details about the video comparison link.
  */
 @JsonPropertyOrder({
-  MasterVideo.JSON_PROPERTY_ID,
-  MasterVideo.JSON_PROPERTY_CREATED_AT,
-  MasterVideo.JSON_PROPERTY_UPDATED_AT,
-  MasterVideo.JSON_PROPERTY_VIDEO_FILE
+  VideoComparisonLink.JSON_PROPERTY_LINK,
+  VideoComparisonLink.JSON_PROPERTY_LEFT_VIDEO_ID,
+  VideoComparisonLink.JSON_PROPERTY_RIGHT_VIDEO_ID
 })
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-11-12T09:20:19.360648577Z[UTC]", comments = "Generator version: 7.15.0")
-public class MasterVideo {
-  public static final String JSON_PROPERTY_ID = "id";
+public class VideoComparisonLink {
+  public static final String JSON_PROPERTY_LINK = "link";
   @javax.annotation.Nonnull
-  private UUID id;
+  private URI link;
 
-  public static final String JSON_PROPERTY_CREATED_AT = "createdAt";
+  public static final String JSON_PROPERTY_LEFT_VIDEO_ID = "leftVideoId";
   @javax.annotation.Nonnull
-  private OffsetDateTime createdAt;
+  private UUID leftVideoId;
 
-  public static final String JSON_PROPERTY_UPDATED_AT = "updatedAt";
+  public static final String JSON_PROPERTY_RIGHT_VIDEO_ID = "rightVideoId";
   @javax.annotation.Nonnull
-  private OffsetDateTime updatedAt;
+  private UUID rightVideoId;
 
-  public static final String JSON_PROPERTY_VIDEO_FILE = "videoFile";
-  @javax.annotation.Nonnull
-  private VideoFile videoFile;
-
-  public MasterVideo() {
+  public VideoComparisonLink() {
   }
   /**
    * Constructor with only readonly parameters
    */
   @JsonCreator
-  public MasterVideo(
-    @JsonProperty(JSON_PROPERTY_CREATED_AT) OffsetDateTime createdAt, 
-    @JsonProperty(JSON_PROPERTY_UPDATED_AT) OffsetDateTime updatedAt
+  public VideoComparisonLink(
+    @JsonProperty(JSON_PROPERTY_LINK) URI link
   ) {
     this();
-    this.createdAt = createdAt;
-    this.updatedAt = updatedAt;
+    this.link = link;
   }
 
-  public MasterVideo id(@javax.annotation.Nonnull UUID id) {
+  /**
+   * The URL link used for comparing the source and target videos.
+   * @return link
+   */
+  @javax.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_LINK)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
+  public URI getLink() {
+    return link;
+  }
+
+
+
+  public VideoComparisonLink leftVideoId(@javax.annotation.Nonnull UUID leftVideoId) {
     
-    this.id = id;
+    this.leftVideoId = leftVideoId;
     return this;
   }
 
   /**
    * A universally unique identifier (UUID) compliant with [RFC 4122](https://tools.ietf.org/html/rfc4122). Used as a unique key to identify resources or entities across systems.
-   * @return id
+   * @return leftVideoId
    */
   @javax.annotation.Nonnull
-  @JsonProperty(JSON_PROPERTY_ID)
+  @JsonProperty(JSON_PROPERTY_LEFT_VIDEO_ID)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
 
-  public UUID getId() {
-    return id;
+  public UUID getLeftVideoId() {
+    return leftVideoId;
   }
 
 
-  @JsonProperty(JSON_PROPERTY_ID)
+  @JsonProperty(JSON_PROPERTY_LEFT_VIDEO_ID)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
-  public void setId(@javax.annotation.Nonnull UUID id) {
-    this.id = id;
+  public void setLeftVideoId(@javax.annotation.Nonnull UUID leftVideoId) {
+    this.leftVideoId = leftVideoId;
   }
 
-  /**
-   * Date and time when the object was created.
-   * @return createdAt
-   */
-  @javax.annotation.Nonnull
-  @JsonProperty(JSON_PROPERTY_CREATED_AT)
-  @JsonInclude(value = JsonInclude.Include.ALWAYS)
-
-  public OffsetDateTime getCreatedAt() {
-    return createdAt;
-  }
-
-
-
-  /**
-   * Date and time when the object was last updated.
-   * @return updatedAt
-   */
-  @javax.annotation.Nonnull
-  @JsonProperty(JSON_PROPERTY_UPDATED_AT)
-  @JsonInclude(value = JsonInclude.Include.ALWAYS)
-
-  public OffsetDateTime getUpdatedAt() {
-    return updatedAt;
-  }
-
-
-
-  public MasterVideo videoFile(@javax.annotation.Nonnull VideoFile videoFile) {
+  public VideoComparisonLink rightVideoId(@javax.annotation.Nonnull UUID rightVideoId) {
     
-    this.videoFile = videoFile;
+    this.rightVideoId = rightVideoId;
     return this;
   }
 
   /**
-   * Get videoFile
-   * @return videoFile
+   * A universally unique identifier (UUID) compliant with [RFC 4122](https://tools.ietf.org/html/rfc4122). Used as a unique key to identify resources or entities across systems.
+   * @return rightVideoId
    */
   @javax.annotation.Nonnull
-  @JsonProperty(JSON_PROPERTY_VIDEO_FILE)
+  @JsonProperty(JSON_PROPERTY_RIGHT_VIDEO_ID)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
 
-  public VideoFile getVideoFile() {
-    return videoFile;
+  public UUID getRightVideoId() {
+    return rightVideoId;
   }
 
 
-  @JsonProperty(JSON_PROPERTY_VIDEO_FILE)
+  @JsonProperty(JSON_PROPERTY_RIGHT_VIDEO_ID)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
-  public void setVideoFile(@javax.annotation.Nonnull VideoFile videoFile) {
-    this.videoFile = videoFile;
+  public void setRightVideoId(@javax.annotation.Nonnull UUID rightVideoId) {
+    this.rightVideoId = rightVideoId;
   }
 
   @Override
@@ -157,26 +135,24 @@ public class MasterVideo {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    MasterVideo masterVideo = (MasterVideo) o;
-    return Objects.equals(this.id, masterVideo.id) &&
-        Objects.equals(this.createdAt, masterVideo.createdAt) &&
-        Objects.equals(this.updatedAt, masterVideo.updatedAt) &&
-        Objects.equals(this.videoFile, masterVideo.videoFile);
+    VideoComparisonLink videoComparisonLink = (VideoComparisonLink) o;
+    return Objects.equals(this.link, videoComparisonLink.link) &&
+        Objects.equals(this.leftVideoId, videoComparisonLink.leftVideoId) &&
+        Objects.equals(this.rightVideoId, videoComparisonLink.rightVideoId);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, createdAt, updatedAt, videoFile);
+    return Objects.hash(link, leftVideoId, rightVideoId);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class MasterVideo {\n");
-    sb.append("    id: ").append(toIndentedString(id)).append("\n");
-    sb.append("    createdAt: ").append(toIndentedString(createdAt)).append("\n");
-    sb.append("    updatedAt: ").append(toIndentedString(updatedAt)).append("\n");
-    sb.append("    videoFile: ").append(toIndentedString(videoFile)).append("\n");
+    sb.append("class VideoComparisonLink {\n");
+    sb.append("    link: ").append(toIndentedString(link)).append("\n");
+    sb.append("    leftVideoId: ").append(toIndentedString(leftVideoId)).append("\n");
+    sb.append("    rightVideoId: ").append(toIndentedString(rightVideoId)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -224,39 +200,34 @@ public class MasterVideo {
 
     StringJoiner joiner = new StringJoiner("&");
 
-    // add `id` to the URL query string
-    if (getId() != null) {
+    // add `link` to the URL query string
+    if (getLink() != null) {
       try {
-        joiner.add(String.format("%sid%s=%s", prefix, suffix, URLEncoder.encode(String.valueOf(getId()), "UTF-8").replaceAll("\\+", "%20")));
+        joiner.add(String.format("%slink%s=%s", prefix, suffix, URLEncoder.encode(String.valueOf(getLink()), "UTF-8").replaceAll("\\+", "%20")));
       } catch (UnsupportedEncodingException e) {
         // Should never happen, UTF-8 is always supported
         throw new RuntimeException(e);
       }
     }
 
-    // add `createdAt` to the URL query string
-    if (getCreatedAt() != null) {
+    // add `leftVideoId` to the URL query string
+    if (getLeftVideoId() != null) {
       try {
-        joiner.add(String.format("%screatedAt%s=%s", prefix, suffix, URLEncoder.encode(String.valueOf(getCreatedAt()), "UTF-8").replaceAll("\\+", "%20")));
+        joiner.add(String.format("%sleftVideoId%s=%s", prefix, suffix, URLEncoder.encode(String.valueOf(getLeftVideoId()), "UTF-8").replaceAll("\\+", "%20")));
       } catch (UnsupportedEncodingException e) {
         // Should never happen, UTF-8 is always supported
         throw new RuntimeException(e);
       }
     }
 
-    // add `updatedAt` to the URL query string
-    if (getUpdatedAt() != null) {
+    // add `rightVideoId` to the URL query string
+    if (getRightVideoId() != null) {
       try {
-        joiner.add(String.format("%supdatedAt%s=%s", prefix, suffix, URLEncoder.encode(String.valueOf(getUpdatedAt()), "UTF-8").replaceAll("\\+", "%20")));
+        joiner.add(String.format("%srightVideoId%s=%s", prefix, suffix, URLEncoder.encode(String.valueOf(getRightVideoId()), "UTF-8").replaceAll("\\+", "%20")));
       } catch (UnsupportedEncodingException e) {
         // Should never happen, UTF-8 is always supported
         throw new RuntimeException(e);
       }
-    }
-
-    // add `videoFile` to the URL query string
-    if (getVideoFile() != null) {
-      joiner.add(getVideoFile().toUrlQueryString(prefix + "videoFile" + suffix));
     }
 
     return joiner.toString();
