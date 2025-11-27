@@ -1,7 +1,7 @@
 # pixop-api-java-sdk
 Java SDK for integrating Pixop's video archive conversion REST API (https://docs.pixop.com/)
 
-**API Version:** `1.0.0-rc.6`
+**API Version:** `1.0.0-rc.7`
 
 ## Recommendation
 
