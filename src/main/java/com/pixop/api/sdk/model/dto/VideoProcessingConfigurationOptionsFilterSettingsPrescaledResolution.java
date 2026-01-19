@@ -27,17 +27,15 @@ import java.net.URLEncoder;
 import java.util.StringJoiner;
 
 /**
- * Specifies the cropped rectangle applied to the processed video when &#x60;filters.reshaper&#x60; is set to &#x60;CROP&#x60;.  The dimensions and position are determined by the normalized crop coordinates and the source video dimensions. 
+ * Defines the resolution settings for prescaling when &#x60;filters.prescaler&#x60; is used. 
  */
 @JsonPropertyOrder({
-  VideoProcessingConfigurationOptionsFilterSettingsCropRectangle.JSON_PROPERTY_WIDTH,
-  VideoProcessingConfigurationOptionsFilterSettingsCropRectangle.JSON_PROPERTY_HEIGHT,
-  VideoProcessingConfigurationOptionsFilterSettingsCropRectangle.JSON_PROPERTY_X,
-  VideoProcessingConfigurationOptionsFilterSettingsCropRectangle.JSON_PROPERTY_Y
+  VideoProcessingConfigurationOptionsFilterSettingsPrescaledResolution.JSON_PROPERTY_WIDTH,
+  VideoProcessingConfigurationOptionsFilterSettingsPrescaledResolution.JSON_PROPERTY_HEIGHT
 })
-@JsonTypeName("VideoProcessingConfigurationOptions_filterSettings_cropRectangle")
+@JsonTypeName("VideoProcessingConfigurationOptions_filterSettings_prescaledResolution")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-01-19T09:47:06.683143397Z[UTC]", comments = "Generator version: 7.15.0")
-public class VideoProcessingConfigurationOptionsFilterSettingsCropRectangle {
+public class VideoProcessingConfigurationOptionsFilterSettingsPrescaledResolution {
   public static final String JSON_PROPERTY_WIDTH = "width";
   @javax.annotation.Nonnull
   private Integer width;
@@ -46,26 +44,19 @@ public class VideoProcessingConfigurationOptionsFilterSettingsCropRectangle {
   @javax.annotation.Nonnull
   private Integer height;
 
-  public static final String JSON_PROPERTY_X = "x";
-  @javax.annotation.Nullable
-  private Integer x;
-
-  public static final String JSON_PROPERTY_Y = "y";
-  @javax.annotation.Nullable
-  private Integer y;
-
-  public VideoProcessingConfigurationOptionsFilterSettingsCropRectangle() {
+  public VideoProcessingConfigurationOptionsFilterSettingsPrescaledResolution() {
   }
 
-  public VideoProcessingConfigurationOptionsFilterSettingsCropRectangle width(@javax.annotation.Nonnull Integer width) {
+  public VideoProcessingConfigurationOptionsFilterSettingsPrescaledResolution width(@javax.annotation.Nonnull Integer width) {
     
     this.width = width;
     return this;
   }
 
   /**
-   * The width of the cropped rectangle in pixels.
-   * minimum: 1
+   * Width of the prescaled video in pixels.
+   * minimum: 16
+   * maximum: 7680
    * @return width
    */
   @javax.annotation.Nonnull
@@ -83,15 +74,16 @@ public class VideoProcessingConfigurationOptionsFilterSettingsCropRectangle {
     this.width = width;
   }
 
-  public VideoProcessingConfigurationOptionsFilterSettingsCropRectangle height(@javax.annotation.Nonnull Integer height) {
+  public VideoProcessingConfigurationOptionsFilterSettingsPrescaledResolution height(@javax.annotation.Nonnull Integer height) {
     
     this.height = height;
     return this;
   }
 
   /**
-   * The height of the cropped rectangle in pixels.
-   * minimum: 1
+   * Height of the prescaled video in pixels.
+   * minimum: 16
+   * maximum: 4320
    * @return height
    */
   @javax.annotation.Nonnull
@@ -109,58 +101,6 @@ public class VideoProcessingConfigurationOptionsFilterSettingsCropRectangle {
     this.height = height;
   }
 
-  public VideoProcessingConfigurationOptionsFilterSettingsCropRectangle x(@javax.annotation.Nullable Integer x) {
-    
-    this.x = x;
-    return this;
-  }
-
-  /**
-   * The X-coordinate of the top-left corner of the cropped rectangle.
-   * minimum: 0
-   * @return x
-   */
-  @javax.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_X)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public Integer getX() {
-    return x;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_X)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setX(@javax.annotation.Nullable Integer x) {
-    this.x = x;
-  }
-
-  public VideoProcessingConfigurationOptionsFilterSettingsCropRectangle y(@javax.annotation.Nullable Integer y) {
-    
-    this.y = y;
-    return this;
-  }
-
-  /**
-   * The Y-coordinate of the top-left corner of the cropped rectangle.
-   * minimum: 0
-   * @return y
-   */
-  @javax.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_Y)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public Integer getY() {
-    return y;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_Y)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setY(@javax.annotation.Nullable Integer y) {
-    this.y = y;
-  }
-
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -169,26 +109,22 @@ public class VideoProcessingConfigurationOptionsFilterSettingsCropRectangle {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    VideoProcessingConfigurationOptionsFilterSettingsCropRectangle videoProcessingConfigurationOptionsFilterSettingsCropRectangle = (VideoProcessingConfigurationOptionsFilterSettingsCropRectangle) o;
-    return Objects.equals(this.width, videoProcessingConfigurationOptionsFilterSettingsCropRectangle.width) &&
-        Objects.equals(this.height, videoProcessingConfigurationOptionsFilterSettingsCropRectangle.height) &&
-        Objects.equals(this.x, videoProcessingConfigurationOptionsFilterSettingsCropRectangle.x) &&
-        Objects.equals(this.y, videoProcessingConfigurationOptionsFilterSettingsCropRectangle.y);
+    VideoProcessingConfigurationOptionsFilterSettingsPrescaledResolution videoProcessingConfigurationOptionsFilterSettingsPrescaledResolution = (VideoProcessingConfigurationOptionsFilterSettingsPrescaledResolution) o;
+    return Objects.equals(this.width, videoProcessingConfigurationOptionsFilterSettingsPrescaledResolution.width) &&
+        Objects.equals(this.height, videoProcessingConfigurationOptionsFilterSettingsPrescaledResolution.height);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(width, height, x, y);
+    return Objects.hash(width, height);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class VideoProcessingConfigurationOptionsFilterSettingsCropRectangle {\n");
+    sb.append("class VideoProcessingConfigurationOptionsFilterSettingsPrescaledResolution {\n");
     sb.append("    width: ").append(toIndentedString(width)).append("\n");
     sb.append("    height: ").append(toIndentedString(height)).append("\n");
-    sb.append("    x: ").append(toIndentedString(x)).append("\n");
-    sb.append("    y: ").append(toIndentedString(y)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -250,26 +186,6 @@ public class VideoProcessingConfigurationOptionsFilterSettingsCropRectangle {
     if (getHeight() != null) {
       try {
         joiner.add(String.format("%sheight%s=%s", prefix, suffix, URLEncoder.encode(String.valueOf(getHeight()), "UTF-8").replaceAll("\\+", "%20")));
-      } catch (UnsupportedEncodingException e) {
-        // Should never happen, UTF-8 is always supported
-        throw new RuntimeException(e);
-      }
-    }
-
-    // add `x` to the URL query string
-    if (getX() != null) {
-      try {
-        joiner.add(String.format("%sx%s=%s", prefix, suffix, URLEncoder.encode(String.valueOf(getX()), "UTF-8").replaceAll("\\+", "%20")));
-      } catch (UnsupportedEncodingException e) {
-        // Should never happen, UTF-8 is always supported
-        throw new RuntimeException(e);
-      }
-    }
-
-    // add `y` to the URL query string
-    if (getY() != null) {
-      try {
-        joiner.add(String.format("%sy%s=%s", prefix, suffix, URLEncoder.encode(String.valueOf(getY()), "UTF-8").replaceAll("\\+", "%20")));
       } catch (UnsupportedEncodingException e) {
         // Should never happen, UTF-8 is always supported
         throw new RuntimeException(e);
